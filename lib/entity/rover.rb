@@ -1,4 +1,5 @@
 require_relative "../model/directions"
+
 module Entity
   class Rover
 
@@ -22,7 +23,6 @@ module Entity
       @position = @direction.move_forward(@position)
       if @grid.obstacle == @position
         self.move_backward
-        puts "NOK"
         return
       end
     end
@@ -31,7 +31,6 @@ module Entity
       @position = @direction.move_backward(@position)
       if @grid.obstacle == @position
         self.move_forward
-        puts "NOK"
         return
       end
     end

@@ -1,3 +1,5 @@
+require_relative '../exception'
+
 module Command
   class CommandExecuter
 
@@ -16,6 +18,8 @@ module Command
             @rover.move_forward
           when command.upcase == 'B'
             @rover.move_backward
+          else
+            raise Exception.new "Invalid Command"
         end
       end
     end
