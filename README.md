@@ -23,5 +23,11 @@ Go to the program directory and Run
 ruby lib/mars_rover.rb rover_input.txt
 ```
 
+To run specs
+
+```ruby
+rspec
+```
+
 
 **NOTE: input file is included in the repository as rover_input.txt.
