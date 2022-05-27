@@ -9,7 +9,7 @@ grid = Entity::Grid.new(grid_size)
 while !ARGF.eof
   rover_position = ARGF.gets
   position = rover_position.split[0, 2]
-  direction = Model::Directions.facing(rover_position.split[2])
+  direction = Model::Directions.new(rover_position.split[2]).facing
   rover = Entity::Rover.new(grid, direction, position)
   Command::CommandExecuter.new(rover).execute ARGF.gets
 

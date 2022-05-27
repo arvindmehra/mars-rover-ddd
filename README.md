@@ -15,10 +15,6 @@ Develop an API that moves a rover around on a grid.
 
 Clone the repository and run.
 
-```bash
-bundle
-```
-
 ## Run
 
 Go to the program directory and Run
