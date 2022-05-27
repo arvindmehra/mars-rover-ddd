@@ -1,11 +1,11 @@
 module Model
   class West
     def turn_left
-      Action::SOUTH
+      Constant::SOUTH
     end
 
     def turn_right
-      Action::NORTH
+      Constant::NORTH
     end
 
     def move_forward(current_position)

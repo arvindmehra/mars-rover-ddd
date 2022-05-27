@@ -4,7 +4,7 @@ require_relative './east'
 require_relative './west'
 
 module Model
-  class Action
+  class Constant
     NORTH = North.new
     EAST  = East.new
     WEST  = West.new

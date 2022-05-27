@@ -1,4 +1,4 @@
-require_relative './action'
+require_relative './constant'
 
 module Model
   class Directions
@@ -12,13 +12,13 @@ module Model
     def facing
       case
         when @direction == 'N'
-          Action::NORTH
+          Constant::NORTH
         when @direction == 'E'
-          Action::EAST
+          Constant::EAST
         when @direction == 'W'
-          Action::WEST
+          Constant::WEST
         when @direction == 'S'
-          Action::SOUTH
+          Constant::SOUTH
       end
     end
 

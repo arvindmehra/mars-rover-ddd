@@ -1,7 +1,7 @@
 require_relative "../lib/entity/rover"
 require_relative "../lib/command/command_executer"
 require_relative "../lib/entity/grid"
-require_relative "../lib/model/action"
+require_relative "../lib/model/constant"
 
 
 describe Entity::Rover do
@@ -31,17 +31,17 @@ describe Entity::Rover do
 
     it "turns left when command is L" do
       rover_command.execute("L")
-      expect(subject.direction).to eq Model::Action::SOUTH
+      expect(subject.direction).to eq Model::Constant::SOUTH
     end
 
     it "turns left when command is R" do
       rover_command.execute("R")
-      expect(subject.direction).to eq Model::Action::NORTH
+      expect(subject.direction).to eq Model::Constant::NORTH
     end
 
     it "ignores command case" do
       rover_command.execute("r")
-      expect(subject.direction).to eq Model::Action::NORTH
+      expect(subject.direction).to eq Model::Constant::NORTH
     end
 
     # it "throws exception when command is unknown" do
@@ -53,7 +53,7 @@ describe Entity::Rover do
     expected_position = [1,3]
     rover_command.execute("RFR")
     expect(subject.position).to eq expected_position
-    expect(subject.direction).to eq Model::Action::EAST
+    expect(subject.direction).to eq Model::Constant::EAST
   end
 
   it "moves from one edge of the grid to another" do
@@ -66,7 +66,7 @@ describe Entity::Rover do
     expected_position = [2, 4]
     rover_command.execute("RFFRF")
     expect(subject.position).to eq expected_position
-    expect(subject.direction).to eq Model::Action::EAST
+    expect(subject.direction).to eq Model::Constant::EAST
   end
 
   # This test doesnt't makes sense is same like above
