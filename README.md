@@ -17,11 +17,13 @@ Clone the repository and run.
 
 ## Run
 
-Go to the program directory and Run
+Go to the program directory and Run. This program uses OptionParser and takes use of command line inputs in argument forms. 
 
 ```ruby
-ruby lib/mars_rover.rb rover_input.txt
+ruby lib/mars_rover.rb --g 6602 --p 12W --c LFLFLFLFU
 ```
+
+Type ruby ```lib/mars_rover.rb --h``` for help
 
 To run specs
 
