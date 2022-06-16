@@ -8,16 +8,16 @@ module Model
       Constant::SOUTH
     end
 
-    def move_forward(current_position)
-      x = current_position[0] + 1
-      y = current_position[1]
+    def move_forward(current_coordinate)
+      x, y = current_coordinate
+      x = x + 1
 
       [x, y]
     end
 
-    def move_backward(current_position)
-      x = current_position[0] - 1
-      y = current_position[1]
+    def move_backward(current_coordinate)
+      x, y = current_coordinate
+      x = x + 1
 
       [x, y]
     end

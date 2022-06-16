@@ -18,8 +18,10 @@ module Command
             @rover.move_forward
           when command.upcase == 'B'
             @rover.move_backward
+          when command.upcase == 'U'
+            @rover.undo_command
           else
-            raise Exception.new "Invalid Command"
+            raise InvalidCommand.new
         end
       end
     end

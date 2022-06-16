@@ -3,7 +3,6 @@ require_relative "../lib/command/command_executer"
 require_relative "../lib/entity/grid"
 require_relative "../lib/model/constant"
 
-
 describe Entity::Rover do
 
   subject { Entity::Rover.new(grid, direction, rover_coordinates) }
@@ -67,6 +66,13 @@ describe Entity::Rover do
     rover_command.execute("RFFRF")
     expect(subject.position).to eq expected_position
     expect(subject.direction).to eq Model::Constant::EAST
+  end
+
+  it "undo action when encounters U" do
+    expected_position = [1, 4]
+    rover_command.execute("RFFRU")
+    expect(subject.position).to eq expected_position
+    expect(subject.direction).to eq Model::Constant::NORTH
   end
 
   # This test doesnt't makes sense is same like above
