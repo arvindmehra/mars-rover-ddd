@@ -1,4 +1,4 @@
-# Mars Rover using DDD
+# Mars Rover using Domain-Driven Design
 
 ## About
 The Purpose of this repo is
